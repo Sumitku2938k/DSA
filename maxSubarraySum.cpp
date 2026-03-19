@@ -3,15 +3,17 @@ using namespace std;
 
 void maxSubarraySum(int *arr, int n){
     int maxSum = INT16_MIN;
+    int currSum = 0;
 
-    for (int st = 0; st < n; st++)
+    for (int i = 0; i < n; i++)
     {
-        int currSum = 0;
-        for (int end = st; end < n; end++)
+        currSum = currSum + arr[i];
+        maxSum = max(maxSum, currSum);
+        if (currSum < 0)
         {
-            currSum = currSum + arr[end];
-            maxSum = max(maxSum, currSum);
+            currSum = 0;
         }
+        
     }
     cout<<"Maximum Subarray Sum = "<<maxSum<<endl;
 }
