@@ -6,17 +6,12 @@ void maxSubarraySum(int *arr, int n){
 
     for (int st = 0; st < n; st++)
     {
+        int currSum = 0;
         for (int end = st; end < n; end++)
         {
-            int currSum = 0;
-            for (int i = st; i <= end; i++)
-            {
-                currSum = currSum + arr[i];
-            }
-            cout<<currSum<<",";
+            currSum = currSum + arr[end];
             maxSum = max(maxSum, currSum);
         }
-        cout<<endl;
     }
     cout<<"Maximum Subarray Sum = "<<maxSum<<endl;
 }
