@@ -12,18 +12,17 @@ int containsDuplicate(int *arr, int n){
         {
             if (newArr[i] == arr[j])
             {
-                return 1;
+                return true;
             }
             
         }
-        
-        return 0;
     }
+    return false;
     
 }
 
 int main(){
-    int arr[] = {1,1,1,3,3,4,3,2,4,2};
+    int arr[] = {1,2,3,4};
     int n = sizeof(arr)/sizeof(int);
 
     cout << containsDuplicate(arr, n) << endl;
