@@ -7,7 +7,7 @@ void selectionSort(int *arr, int n){
         int minIdx = i;
         for (int j = i+1; j < n; j++)
         {
-            if (arr[j] < arr[minIdx])
+            if (arr[j] > arr[minIdx]) //In case of ascending order, change > to < and vice versa for descending order
             {
                 minIdx = j;
             }
