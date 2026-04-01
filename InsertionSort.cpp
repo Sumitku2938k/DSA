@@ -7,7 +7,7 @@ void insertionSort(int *arr, int n){
         int curr = arr[i];
         int prev = i-1;
 
-        while (prev >= 0 && arr[prev] > curr) //In case of descending order, change > to < 
+        while (prev >= 0 && arr[prev] < curr) //In case of descending order, change > to < 
         {
             arr[prev+1] = arr[prev];
             prev--;
